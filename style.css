@@ -438,8 +438,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media screen and (max-width: 768px) {
     .home-title {
-        z-index: 500;
-        margin-top: 323px;
         align-self: flex-end;
         font-size: 83px;
     }
