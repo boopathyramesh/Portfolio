@@ -4,14 +4,21 @@ const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId);
     const nav = document.getElementById(navId);
 
-    if(toggle && nav) {
+    if (toggle && nav) {
         toggle.addEventListener('click', () => {
             nav.classList.toggle('show');
-        })
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!nav.contains(event.target) && !toggle.contains(event.target)) {
+                nav.classList.remove('show');
+            }
+        });
     }
-}
+};
 
 showMenu('nav-toggle', 'nav-menu');
+
 
 //Toggling Menu by clicking in mobile menu links
 
